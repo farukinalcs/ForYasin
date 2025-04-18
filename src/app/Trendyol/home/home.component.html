@@ -1,0 +1,27 @@
+
+<div class="kapsayici">
+  <div class="select mt-18">
+    <div class="form-group">
+      <label for="exampleSelect1" style="font-size: large;font-weight: bold;">Turnike Sayısı</label>
+      <select class="form-control" id="exampleSelect1" [(ngModel)]="selectedGrid">
+        <option *ngFor="let item of gridCount" [value]="item.id">{{item.text}}</option>
+      </select>
+     </div>
+  </div>
+  <div class="select">
+    <div class="form-group">
+      <label for="exampleSelect1" style="font-size: large;font-weight: bold;">Cihaz Seçimi<span class="text-danger">*</span></label>
+      <select class="form-control" id="exampleSelect1" [(ngModel)]="selectedTerminal">
+        <option *ngFor="let item of terminal" [value]="item.Id">{{item.Ad}}</option>
+      </select>
+     </div>
+  </div>
+   <button (click)="goToturnike()" type="button" class="btn btn-outline-dark btn-lg btn-block"
+    style="width: 30vw;font-size: large;font-weight: bold;">GEÇİŞ KONTROL EKRANI</button>
+    <!-- <div class="d-flex flex-column-auto flex-column mt-10">
+      <a  class="text-center">
+        <img src="./assets/media/logos/ada2.png"  alt="" class="adaimage" />
+      </a>
+    </div> -->
+
+</div>

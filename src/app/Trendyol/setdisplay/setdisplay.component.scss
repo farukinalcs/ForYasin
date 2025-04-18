@@ -1,0 +1,52 @@
+.kapsayici{
+
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0px !important;
+    padding: 0px !important;
+    object-fit: contain !important; 
+
+}
+
+.select{
+    height: 20vh;
+    width: 60vw; 
+}
+.grid-container{
+    height: 100vh;  
+    border:10px solid darkblue;
+    display: grid;
+    // grid-template-areas:
+    //   "header header header"
+    //   "nav main ads"
+    //   "footer footer footer"
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+  }
+  .grid-item{
+    background-color: bisque;
+    border: 4px solid orange;
+    padding: 20px;
+    
+  }
+//   .item-1{
+//   }
+//   .item-2{
+ 
+//   }
+//   .item-3{
+   
+//   }
+  
+//   .item-4{
+  
+//   }
+//   .item-5{
+  
+//   }

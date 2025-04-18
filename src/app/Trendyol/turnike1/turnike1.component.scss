@@ -1,0 +1,30 @@
+*{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 99vh;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+   
+  }
+  .cartimg{
+    width: 49vw;
+    height: 99vh;
+    
+}
+.cartcontent{
+    width: 49vw;
+    height: 99vh;
+    color: black;
+    font-weight: bold;
+    font-size: 2.8vw;
+    padding-top: 10vh !important;
+    padding-bottom: 10vh !important;
+}

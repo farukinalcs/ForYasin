@@ -1,0 +1,71 @@
+<ng-container *ngIf="this.turnike2.length >= 2">
+  <div class="grid-container">
+    <div class="grid-item" *ngFor="let item of turnike2 | slice :0:2">
+      <div class="card">
+        <div class="row">
+          <div style="height: 47vh !important;width: 27vw !important;">
+            <!-- <img src="../../../assets/media/logos/person512.png" alt="..." style="height: 47vh !important;object-fit: contain;"> -->
+            <ng-container *ngIf="item.FotoImage == null">
+              <img *ngIf="item.Bolum == '1'" src="../../../assets/media/logos/Mavi.PNG" alt="..." style="height: 47vh !important;object-fit: contain;">
+              <img *ngIf="item.Bolum == '2'" src="../../../assets/media/logos/Sarı.PNG" alt="..." style="height: 47vh !important;object-fit: contain;">
+              
+          </ng-container>
+          <ng-container *ngIf="item.FotoImage != null">
+              <img src="{{'data:image/jpg;base64,' + item.FotoImage}}" alt="..." style="height: 47vh !important;object-fit: contain;">
+              <!-- <img src="{{'data:image/jpg;base64,' + imagePath}}" /> -->
+          </ng-container>
+          </div>
+            <div class="card-body">
+              <p class="cartcontent" style="background-color:#800000;color:white">{{item.Altfirma}}</p>
+              <p class="cartcontent">{{item.AdSoyad}}</p>
+              <p class="cartcontent">{{item.TcNo}}</p>
+              <p class="cartcontent" *ngIf="item.Bolum == '1'">PERSONEL</p>
+              <p class="cartcontent" *ngIf="item.Bolum == '2'">ÖĞRENCİ</p>
+              <!-- <p class="cartcontent">{{this.tckn(item.TcNo)}}</p> -->
+              <p class="cartcontent">{{item.GecisZamani | date : 'dd.MM.yyyy - HH:mm:ss'}}</p>
+              <p class="cartcontent" style="background-color:#5e9ea0;color:white">{{item.TerminalAdi}}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </ng-container>
+
+  <ng-container *ngIf="this.turnike2.length == 1">
+    <div class="grid-container1">
+      <div class="grid-item1" *ngFor="let item of turnike2 | slice :0:1">
+          <div class="cartimg">
+              <!-- <img src="../../../assets/media/logos/person512.png" alt="..." style="height: 99vh !important;width: 49vw !important;"> -->
+              <ng-container *ngIf="item.FotoImage == null">
+               
+                <img *ngIf="item.Bolum == '1'" src="../../../assets/media/logos/Mavi.PNG" alt="..." style="height: 99vh !important;width: 49vw !important;">
+                <img *ngIf="item.Bolum == '2'" src="../../../assets/media/logos/Sarı.PNG" alt="..." style="height: 99vh !important;width: 49vw !important;">
+                
+            </ng-container>
+            <ng-container *ngIf="item.FotoImage != null">
+                <img src="{{'data:image/jpg;base64,' + item.FotoImage}}" alt="..." style="height: 99vh !important;width: 49vw !important;">
+                <!-- <img src="{{'data:image/jpg;base64,' + imagePath}}" /> -->
+            </ng-container>
+          </div>
+      </div>
+      <div class="grid-item1" *ngFor="let item of turnike2 | slice :0:1">
+          <div class="cartcontent1">
+              <p style="background-color:#800000;color:white">{{item.Altfirma}}</p>
+              <p>{{item.AdSoyad}}</p>
+              <p *ngIf="item.Bolum == '1'">PERSONEL</p>
+              <p *ngIf="item.Bolum == '2'">ÖĞRENCİ</p>
+              <!-- <p>{{this.tckn(item.TcNo)}}</p> -->
+              <p>{{item.GecisZamani | date : 'dd.MM.yyyy - HH:mm:ss'}}</p>
+              <p style="background-color:#5e9ea0;color:white">{{item.TerminalAdi}}</p>
+          </div>
+      </div>
+  </div>
+  </ng-container>
+
+  <ng-container *ngIf="this.turnike2.length == 0">
+    <div class="grid-container" style="background-color: white !important;">
+      <div>
+          <img src="../../../assets/media/logos/pirireis3.jpg" alt="..." style="height: 95vh !important;width: 95vw !important;object-fit: contain;">
+      </div>
+    </div>
+</ng-container>
